@@ -19,17 +19,32 @@ const Hero = () => {
           </p>
         </div>
         <div className=" flex flex-row items-center w-full">
-            <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
-              The Next <br className="sm:block hidden" />{" "}
-              <span className="text-gradient">Generation</span>{" "}
-            </h1>
-            <div className="ss:flex hidden ">
-                <GetStarted />
-            </div>
+          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
+            The Next <br className="sm:block hidden" />{" "}
+            <span className="text-gradient">Generation</span>{" "}
+          </h1>
+          <div className="ss:flex hidden ">
+            <GetStarted />
+          </div>
         </div>
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
           Payment Method.
         </h1>
+        <p className={`${styles.paragraph} max-w-[470px] mt-2 `}>
+          Our team of experts uses a methodology to identify the credit cards
+          most likely to fit your needs. We examine annual percentage rates,
+          annual fees.
+        </p>
+      </div>
+      <div>
+        <img
+          src={robot}
+          alt="billing"
+          className="w-[100%] h-[100% relative z-[5]"
+        />
+        <div className="absolute pink__gradient w-[40%] h-[35%] top-0 z-[0]" />
+        <div className="absolute  w-[80%] h-[80%] white__gradient bottom-40 rounded-full z-[1]" />
+        <div className="absolute blue__gradient w-[50%] h-[50%] right-20 z-[0]" />
       </div>
     </section>
   );
