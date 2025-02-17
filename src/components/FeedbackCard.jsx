@@ -3,16 +3,16 @@ import { quotes } from '../assets'
 
 const FeedbackCard = ({img,name,title,content}) => {
   return (
-    <div className='flex justify-between flex-col px-10 py-12 rounded-[12px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 feedback-card '>
-      <img src={quotes} alt={name} className='w-[42px] h-[27px] object-contain ' />
-      <p className='font-poppins font-normal text-[18px] leading-[32px] text-dimWhite my-10'>{content}</p>
-      <div className='flex flex-row'>
-          <img src={img} alt={name} className='w-[48px] h-[48px] rounded-full'  />
-          <div className='flex flex-col ml-4'>
-            <h4 className='font-poppins font-semibold text-[20px] leading-[32px] text-white ' >{name}</h4>
-             <p className='font-poppins font-normal text-dimWhite text-[16px] leading-[32px]'>{title}</p>
-          </div>
-      </div>
+    <div className="flex justify-between flex-col max-w-[370px] feedback-card px-10 py-12 rounded-[20px] md:mr-10 sm:mr-5 mr-0 my-10 relative">
+        <img src={quotes} alt="quotes" className='w-[42px] h-[28px] object-contain' />
+        <p className='my-10 text-white font-poppins font-normal text-[18px] leading-[32px]'>{content}</p>
+        <div className='flex flex-row items-center'>
+            <img src={img} alt={name} className='w-[64px] h-[64px] rounded-full' />
+            <div className='flex flex-col ml-4'>
+                <h3 className='font-poppins font-semibold text-white text-[20px] leading-[32px]'>{name}</h3>
+                <p className='font-poppins font-normal text-dimWhite text-[16px] leading-[24px]'>{title}</p>
+            </div>
+        </div>
     </div>
   )
 }
