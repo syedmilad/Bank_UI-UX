@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../style'
 import { logo } from '../assets'
-import { footerLinks, navLinks } from '../constants'
+import { footerLinks, navLinks, socialMedia } from '../constants'
 
 const Footer = () => {
   return (
@@ -28,7 +28,21 @@ const Footer = () => {
               ))}
             </div>
         </div>
-        <div></div>
+        <div className='w-full my-4 border-b border-b-[#3F3E45]' />
+        <div className='flex md:flex-row flex-col justify-between items-center py-8'>
+          <div className='mr-4'>
+            <p className='font-poppins font-normal text-[16px] text-dimWhite leading-[24px] ' >Copyright 2021 HooBank. All Rights Reserved. </p>
+          </div>
+          <div className='flex flex-row md:mt-0 mt-4'>
+          {socialMedia.map((social,index)=>(
+            <img 
+              src={social.icon} 
+              alt={social.id}
+              className={`w-[21px] h-[21px] object-contain ${index !== social.length - 1  ? "mr-4" : "mb-0"} `}
+               />
+          ))}
+          </div>
+        </div>
     </div>
   )
 }
